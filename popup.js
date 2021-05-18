@@ -6,13 +6,12 @@ const trackers = {
     linkedIn: 'linkedIn',
 }
 
-const imgGood = 'assets/like.png'
-const imgBad = 'assets/unlike.png'
-
 const getWebsiteTrackers = (current) => {
     for (const tracker in trackers) {
         document.getElementById(tracker).innerHTML += ` ${
-      current.trackers[tracker] ? 'You are in trouble!' : 'Are you sure' 
+      current.trackers[tracker] ? 
+        `You are in trouble! <img src="assets/like.png"/>` : 
+        `You are safe <img src="assets/unlike.png"/>`
     }`
     }
 }
@@ -31,8 +30,7 @@ const getHistoryTrackers = (history) => {
 }
 
 window.onload = () => {
-    var like = document.createElement("img");
-    like.src = "";
+
     chrome.runtime.sendMessage({
                 context: 'getTrackers',
             },
