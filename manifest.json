@@ -14,7 +14,13 @@
     },
     "browser_action": {
         "title": "Track The Trackers",
+        "default_icon": {
+            "128": "assets/web.png"
+         },
         "default_popup": "popup.html"
+    },
+    "icons": {
+        "128": "assets/web.png"
     },
     "content_scripts": [{
         "matches": [
