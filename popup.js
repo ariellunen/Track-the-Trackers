@@ -6,10 +6,13 @@ const trackers = {
     linkedIn: 'linkedIn',
 }
 
+const imgGood = 'assets/like.png'
+const imgBad = 'assets/unlike.png'
+
 const getWebsiteTrackers = (current) => {
     for (const tracker in trackers) {
         document.getElementById(tracker).innerHTML += ` ${
-      current.trackers[tracker] ? 'Tracks you!' : 'Innocent for now'
+      current.trackers[tracker] ? 'You are in trouble!' : 'Are you sure' 
     }`
     }
 }
