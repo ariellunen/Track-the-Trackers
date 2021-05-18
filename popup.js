@@ -28,6 +28,8 @@ const getHistoryTrackers = (history) => {
 }
 
 window.onload = () => {
+    var like = document.createElement("img");
+    like.src = "";
     chrome.runtime.sendMessage({
                 context: 'getTrackers',
             },
