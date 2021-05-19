@@ -10,8 +10,8 @@ const getWebsiteTrackers = (current) => {
     for (const tracker in trackers) {
         document.getElementById(tracker).innerHTML += ` ${
       current.trackers[tracker] ? 
-        `You are in trouble! <img src="assets/unlike.png" style="width:20px"/>` : 
-        `You are safe <img src="assets/like.png" style="width:20px"/>`
+        `<text style="color:red"> You are in trouble! <img src="assets/unlike.png" style="width:20px"/></text>` : 
+        `<text style="color:green"> You are safe <img src="assets/like.png" style="width:20px"/></text>`
     }`
     }
 }
